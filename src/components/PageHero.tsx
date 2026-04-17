@@ -45,8 +45,8 @@ export function PageHero({
       ref={containerRef}
       className={
         compact
-          ? 'relative min-h-[52rem] overflow-hidden flex items-center justify-center md:min-h-[44rem]'
-          : 'relative min-h-[56rem] overflow-hidden flex items-center justify-center md:min-h-[52rem]'
+          ? 'relative flex min-h-[42rem] items-center justify-center overflow-hidden sm:min-h-[46rem] md:min-h-[44rem]'
+          : 'relative flex min-h-[46rem] items-center justify-center overflow-hidden sm:min-h-[52rem] md:min-h-[52rem]'
       }
     >
       <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="absolute inset-0 z-0">
@@ -73,8 +73,8 @@ export function PageHero({
       <div
         className={
           compact
-            ? 'relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center px-6 pt-28 pb-16 text-center sm:px-12 md:px-20 md:pt-32'
-            : 'relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center px-6 pt-28 pb-20 text-center sm:px-12 md:px-20 md:pt-32'
+            ? 'relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center px-5 pt-24 pb-14 text-center sm:px-10 sm:pt-28 sm:pb-16 md:px-20 md:pt-32'
+            : 'relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center px-5 pt-24 pb-16 text-center sm:px-10 sm:pt-28 sm:pb-20 md:px-20 md:pt-32'
         }
       >
         <motion.div
@@ -94,8 +94,8 @@ export function PageHero({
           transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 }}
           className={
             compact
-              ? 'max-w-5xl font-serif text-[4.2rem] font-light leading-[0.92] tracking-tight sm:text-[5.4rem] md:text-[6.2rem]'
-              : 'max-w-5xl font-serif text-[4.7rem] font-light leading-[0.88] tracking-tight sm:text-[6.5rem] md:text-[7.6rem]'
+              ? 'max-w-5xl text-balance font-serif text-[3rem] font-light leading-[0.94] tracking-tight sm:text-[4.4rem] md:text-[6.2rem]'
+              : 'max-w-5xl text-balance font-serif text-[3.35rem] font-light leading-[0.9] tracking-tight sm:text-[5.35rem] md:text-[7.6rem]'
           }
         >
           {title}
@@ -115,7 +115,7 @@ export function PageHero({
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 1 }}
-            className="mt-8 flex flex-col gap-4 sm:flex-row"
+            className="mt-8 flex w-full max-w-md flex-col gap-4 sm:max-w-none sm:flex-row sm:justify-center"
           >
             {actions.map((action, index) => (
               <Link
@@ -123,8 +123,8 @@ export function PageHero({
                 to={action.to}
                 className={
                   index === 0
-                    ? 'rounded-full bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink transition-colors hover:bg-white hover:text-black'
-                    : 'rounded-full border border-white/20 px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all hover:bg-white hover:text-black'
+                    ? 'inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink transition-colors hover:bg-white hover:text-black'
+                    : 'inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all hover:bg-white hover:text-black'
                 }
               >
                 {action.label}

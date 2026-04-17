@@ -86,6 +86,46 @@
   color: var(--color-gold);
 }
 
+.mobile-nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(250, 249, 246, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.mobile-nav-toggle:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  background: rgba(212, 175, 55, 0.06);
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  min-height: 3.5rem;
+  border: 1px solid rgba(250, 249, 246, 0.08);
+  border-radius: 20px;
+  padding: 0.95rem 1rem;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  color: rgba(250, 249, 246, 0.72);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link-active {
+  border-color: rgba(212, 175, 55, 0.35);
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--color-off-white);
+}
+
 .menu-chip {
   border: 1px solid rgba(250, 249, 246, 0.15);
   border-radius: 999px;
@@ -257,6 +297,27 @@
   font-size: 0.8rem;
 }
 
+@media (max-width: 639px) {
+  .small-caps {
+    letter-spacing: 0.18em;
+  }
+
+  .glass-card,
+  .reservation-panel,
+  .compact-reservation-panel {
+    border-radius: 24px;
+    padding: 1.25rem;
+  }
+
+  .reservation-dossier {
+    border-radius: 28px;
+  }
+
+  .reservation-dossier-section {
+    padding: 1.25rem;
+  }
+}
+
 @media (min-width: 768px) {
   .venue-panel-feature {
     grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
@@ -287,5 +348,12 @@
     grid-template-columns: 32px minmax(0, 260px) minmax(0, 1fr);
     gap: 1.5rem;
     align-items: start;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu-ledger-row {
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 1rem;
   }
 }

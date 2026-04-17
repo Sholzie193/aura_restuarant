@@ -137,7 +137,7 @@ export function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.12 }}
-                className={index === 0 ? 'group md:col-span-3' : 'group'}
+                className={index === 0 ? 'group md:col-span-2' : 'group'}
               >
                 <Link to={card.to}>
                   <div className={index === 0 ? 'venue-panel venue-panel-feature' : 'venue-panel'}>
