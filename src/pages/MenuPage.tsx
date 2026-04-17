@@ -19,7 +19,7 @@ export function MenuPage() {
           </>
         }
         description="The menu is designed like the evening itself: reserve cuts first, a measured tasting path for guests who want the full house rhythm, and side dishes that sharpen rather than soften the table."
-        image="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80"
+        image="/images/menu/reserve-tasting-flight.jpg"
         compact
         actions={[
           { label: 'Reserve Dinner', to: '/reservations' },
