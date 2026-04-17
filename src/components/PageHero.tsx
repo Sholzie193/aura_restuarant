@@ -43,7 +43,11 @@ export function PageHero({
   return (
     <section
       ref={containerRef}
-      className={compact ? 'relative min-h-[68vh] overflow-hidden flex items-center justify-center' : 'relative h-screen overflow-hidden flex items-center justify-center'}
+      className={
+        compact
+          ? 'relative min-h-[52rem] overflow-hidden flex items-center justify-center md:min-h-[44rem]'
+          : 'relative min-h-[56rem] overflow-hidden flex items-center justify-center md:min-h-[52rem]'
+      }
     >
       <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/42 z-10" />
@@ -66,7 +70,13 @@ export function PageHero({
         )}
       </motion.div>
 
-      <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center px-6 pt-28 text-center sm:px-12 md:px-20">
+      <div
+        className={
+          compact
+            ? 'relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center px-6 pt-28 pb-16 text-center sm:px-12 md:px-20 md:pt-32'
+            : 'relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center px-6 pt-28 pb-20 text-center sm:px-12 md:px-20 md:pt-32'
+        }
+      >
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -82,7 +92,11 @@ export function PageHero({
           initial={{ opacity: 0, y: 36 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 }}
-          className={compact ? 'max-w-5xl font-serif text-5xl font-light leading-[0.9] tracking-tight sm:text-7xl md:text-8xl' : 'max-w-5xl font-serif text-6xl font-light leading-[0.85] tracking-tight sm:text-8xl md:text-9xl'}
+          className={
+            compact
+              ? 'max-w-5xl font-serif text-[4.2rem] font-light leading-[0.92] tracking-tight sm:text-[5.4rem] md:text-[6.2rem]'
+              : 'max-w-5xl font-serif text-[4.7rem] font-light leading-[0.88] tracking-tight sm:text-[6.5rem] md:text-[7.6rem]'
+          }
         >
           {title}
         </motion.h1>
@@ -91,7 +105,7 @@ export function PageHero({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.25, delay: 0.8 }}
-          className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-white/70 sm:text-xl"
+          className="mt-6 max-w-3xl text-base font-light leading-relaxed text-white/74 sm:text-lg md:text-[1.12rem]"
         >
           {description}
         </motion.p>
@@ -101,7 +115,7 @@ export function PageHero({
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 1 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-8 flex flex-col gap-4 sm:flex-row"
           >
             {actions.map((action, index) => (
               <Link
