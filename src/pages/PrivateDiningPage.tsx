@@ -1,0 +1,93 @@
+import { CalendarDays, ShieldCheck, Users, Wine } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { PageHero } from '../components/PageHero';
+import { privateDiningFormats } from '../site-data';
+
+export function PrivateDiningPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Private dining"
+        title={
+          <>
+            A room for <span className="italic luxury-text-gradient font-normal">serious dinners</span> and private celebration.
+          </>
+        }
+        description="One of the clearest lessons from the Burj Al Arab research is that high-end venues treat private dining as its own product, not a hidden note in the footer. Aura now does the same."
+        image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80"
+        compact
+        actions={[
+          { label: 'Enquire Now', to: '/reservations' },
+          { label: 'View Experience', to: '/experience' },
+        ]}
+      />
+
+      <section className="mx-auto max-w-7xl px-6 py-24 sm:px-12 md:px-20">
+        <div className="grid gap-16 md:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <span className="small-caps text-gold">Dedicated pathway</span>
+            <h2 className="mt-4 font-serif text-4xl font-light leading-tight sm:text-5xl">
+              Private dining deserves its own page, language, and enquiry context.
+            </h2>
+            <p className="mt-6 text-white/60 leading-relaxed">
+              That is how the strongest luxury restaurant sites handle high-value group occasions: with tailored experience descriptions, operational expectations, and a separate route into bookings.
+            </p>
+            <div className="mt-10 space-y-5 text-white/60">
+              <p className="flex items-start gap-3">
+                <Users size={18} className="mt-1 text-gold" />
+                Up to 16 seated guests with custom pacing and a dedicated captain
+              </p>
+              <p className="flex items-start gap-3">
+                <Wine size={18} className="mt-1 text-gold" />
+                Sommelier-led pairings and reserve bottle options selected around the menu
+              </p>
+              <p className="flex items-start gap-3">
+                <CalendarDays size={18} className="mt-1 text-gold" />
+                72-hour lead time recommended for bespoke tasting design and dietary coordination
+              </p>
+              <p className="flex items-start gap-3">
+                <ShieldCheck size={18} className="mt-1 text-gold" />
+                Discreet service routing for executive dinners, launches, and confidential gatherings
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-6">
+            {privateDiningFormats.map((format) => (
+              <div key={format.title} className="glass-card">
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <p className="small-caps text-gold">{format.tag}</p>
+                    <h3 className="mt-3 font-serif text-3xl">{format.title}</h3>
+                  </div>
+                  <p className="font-serif text-2xl text-gold">{format.capacity}</p>
+                </div>
+                <p className="mt-5 text-white/60 leading-relaxed">{format.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/5 bg-ink-light py-24">
+        <div className="mx-auto max-w-7xl px-6 text-center sm:px-12 md:px-20">
+          <span className="small-caps text-gold">Next step</span>
+          <h2 className="mt-4 font-serif text-4xl font-light sm:text-6xl">
+            Move from ambience to <span className="italic">operational confidence</span>.
+          </h2>
+          <p className="mx-auto mt-6 max-w-3xl text-white/60 leading-relaxed">
+            This page gives Aura the kind of high-intent pathway premium guests expect before they submit an enquiry.
+          </p>
+          <div className="mt-10 flex justify-center">
+            <Link
+              to="/reservations"
+              className="rounded-full bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink transition-colors hover:bg-white hover:text-black"
+            >
+              Start a Private Dining Request
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

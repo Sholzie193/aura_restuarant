@@ -72,6 +72,20 @@
   min-height: 100vh;
 }
 
+.nav-link {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  color: rgba(250, 249, 246, 0.68);
+  transition: color 180ms ease;
+}
+
+.nav-link:hover,
+.nav-link-active {
+  color: var(--color-gold);
+}
+
 .menu-chip {
   border: 1px solid rgba(250, 249, 246, 0.15);
   border-radius: 999px;
@@ -106,6 +120,10 @@
   background: rgba(250, 249, 246, 0.03);
   backdrop-filter: blur(10px);
   padding: 1.5rem;
+}
+
+.compact-reservation-panel {
+  padding: 1.25rem;
 }
 
 .reservation-field {
