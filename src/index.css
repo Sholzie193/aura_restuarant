@@ -130,11 +130,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  min-width: 0;
 }
 
 .reservation-field input,
 .reservation-field select,
 .reservation-field textarea {
+  width: 100%;
   border: 1px solid rgba(250, 249, 246, 0.14);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.03);
