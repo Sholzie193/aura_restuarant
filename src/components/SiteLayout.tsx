@@ -83,7 +83,7 @@ export function SiteLayout() {
             <div>
               <p className="small-caps text-gold">Aura Steakhouse</p>
               <h2 className="mt-4 max-w-md font-serif text-4xl font-light leading-tight">
-                A multi-room dining destination shaped for modern celebratory evenings.
+                A dark-room steakhouse in Dubai built around fire, reserve pours, and long-table gravity.
               </h2>
             </div>
             <div>

@@ -18,7 +18,7 @@ export function MenuPage() {
             The <span className="italic luxury-text-gradient font-normal">Cuts</span>, pairings, and progression.
           </>
         }
-        description="A premium menu page should feel curated and navigable. Aura now separates signature steaks, tasting formats, and supporting plates into a proper dining structure."
+        description="The menu is designed like the evening itself: reserve cuts first, a measured tasting path for guests who want the full house rhythm, and side dishes that sharpen rather than soften the table."
         image="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80"
         compact
         actions={[
@@ -29,16 +29,16 @@ export function MenuPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-12 md:px-20">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div>
-            <span className="small-caps text-gold">Daily structure</span>
-            <h2 className="mt-4 font-serif text-5xl font-light sm:text-7xl">
-              Built for <span className="italic">choice and pacing</span>
-            </h2>
+            <div>
+              <span className="small-caps text-gold">House Selection</span>
+              <h2 className="mt-4 font-serif text-5xl font-light sm:text-7xl">
+                Built for <span className="italic">crust, marbling, and pace</span>
+              </h2>
+            </div>
+            <p className="max-w-md text-white/55">
+              The strongest tables choose with intent. Aura keeps the menu concise so every cut, pairing, and finish feels deliberate.
+            </p>
           </div>
-          <p className="max-w-md text-white/55">
-            Inspired by how destination venues separate signature formats, the menu now reads like distinct experiences rather than one flat grid.
-          </p>
-        </div>
 
         <div className="mt-12 flex flex-wrap gap-3">
           {menuCollections.map((collection) => (
@@ -89,10 +89,10 @@ export function MenuPage() {
             <div>
               <span className="small-caps text-gold">Cellar and finish</span>
               <h2 className="mt-4 font-serif text-4xl font-light leading-tight sm:text-5xl">
-                The best premium menus explain how the evening should unfold.
+                The menu should read like a house with habits.
               </h2>
               <p className="mt-6 text-white/60 leading-relaxed">
-                Burj Al Arab&apos;s strongest dining pages signal cuisine type, meal period, atmosphere, and venue identity immediately. Aura applies the same logic by treating menu content as service guidance.
+                At Aura, the kitchen stays tight on purpose. A heavier cut is followed by a cleaner plate. Sauces are restrained. The wine list turns denser as the room darkens.
               </p>
             </div>
 
@@ -111,7 +111,7 @@ export function MenuPage() {
               to="/reservations"
               className="rounded-full border border-white/20 px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all hover:bg-white hover:text-black hover:border-white"
             >
-              Reserve This Menu
+              Reserve This Table
             </Link>
           </div>
         </div>

@@ -13,7 +13,7 @@ export function ExperiencePage() {
             A dining room designed for <span className="italic luxury-text-gradient font-normal">occasion</span>, rhythm, and privacy.
           </>
         }
-        description="Premium hospitality sites do not stop at food. They describe the arrival, the room, the cadence of service, and the conduct expected of the evening. Aura now does the same."
+        description="The best evenings are remembered as sequences: the arrival, the first pour, the heat of the main course, the slowing of the room, and the last glass after midnight."
         image="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80"
         compact
         actions={[
@@ -27,10 +27,10 @@ export function ExperiencePage() {
           <div>
             <span className="small-caps text-gold">Service progression</span>
             <h2 className="mt-4 font-serif text-4xl font-light leading-tight sm:text-5xl">
-              The evening needs structure, not just atmosphere.
+              The evening moves in three measured acts.
             </h2>
             <p className="mt-6 text-white/60 leading-relaxed">
-              Research on Burj Al Arab&apos;s premium venues consistently surfaced service type, timing, and spatial identity. That translates here into a dedicated experience page rather than vague lifestyle copy.
+              Aura is strongest when the room feels choreographed without feeling stiff. That means a slower opening, a serious centre course, and a quieter, darker finish.
             </p>
           </div>
 
@@ -54,11 +54,11 @@ export function ExperiencePage() {
             <div>
               <span className="small-caps text-gold">Guest policies</span>
               <h2 className="mt-4 font-serif text-4xl font-light sm:text-6xl">
-                Professional hospitality is partly about <span className="italic">clarity</span>.
+                Clarity is part of the luxury.
               </h2>
             </div>
             <p className="max-w-md text-white/55">
-              Al Muntaha, SAL, and Skyview all surface dress code, opening times, and age policies clearly. Aura applies that same discipline here.
+              Guests should know the pace, dress, and expectations of the room before they arrive. Quiet confidence starts long before the host stand.
             </p>
           </div>
 

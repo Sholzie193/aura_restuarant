@@ -91,71 +91,104 @@ export const menuCollections = [
 export const pairingNotes = [
   {
     title: 'Reserve cellar',
-    text: 'Dense reds and mature vintages are positioned as part of the menu journey rather than an afterthought.',
+    text: 'Dense reds and mature vintages are poured around fat, crust, and finish, not prestige alone.',
   },
   {
-    title: 'Fire first',
-    text: 'Wood smoke, crust, and rendered fat drive pairing logic more than origin or prestige alone.',
+    title: 'Sauce service',
+    text: 'Only three house sauces are offered nightly, each finished tableside so the room feels ceremonial rather than busy.',
   },
   {
     title: 'Measured finish',
-    text: 'Dessert and digestif content is kept tight so the final part of dinner feels deliberate and clean.',
+    text: 'Dessert, cheese, and digestif stay tight so the last quarter of dinner feels clean, dark, and deliberate.',
+  },
+];
+
+export const auraRituals = [
+  {
+    tag: '01',
+    title: 'The salt chamber',
+    text: 'Prime cuts rest behind glass in a mineral-lined ageing room visible from the threshold of the dining room.',
+  },
+  {
+    tag: '02',
+    title: 'The carving pass',
+    text: 'Signature steaks are rested, sliced, and finished tableside so every guest sees texture before the first bite.',
+  },
+  {
+    tag: '03',
+    title: 'The cellar pour',
+    text: 'Large-format bottles and reserve reds arrive late in the sequence, once the room has settled into dinner.',
+  },
+];
+
+export const provenanceNotes = [
+  {
+    title: 'Sourcing map',
+    text: 'Japanese wagyu, Australian dry-aged cuts, and a tightly held European reserve programme define the house selection.',
+  },
+  {
+    title: 'Fire profile',
+    text: 'White oak builds the crust, binchotan keeps the finish clean, and the kitchen avoids heavy smoke for precision.',
+  },
+  {
+    title: 'Room energy',
+    text: 'No loud theatre, no overworked garnish language, no oversized menu. The room is built for deep focus and long dinners.',
   },
 ];
 
 export const experienceMoments = [
   {
     step: '01',
-    title: 'Arrival and aperitif',
-    text: 'Guests begin in a quieter threshold space with a hosted arrival, restrained aperitif program, and enough time to settle before the dining room sequence starts.',
+    title: 'Arrival at the upper lounge',
+    text: 'The evening begins above the main room with a welcome pour, a quieter first conversation, and a deliberate pause before seating.',
   },
   {
     step: '02',
-    title: 'Fire-led main service',
-    text: 'The core of the evening is paced around cuts, temperature, and marbling, with tableside guidance that stays polished rather than theatrical.',
+    title: 'The fire-led centre course',
+    text: 'The core of dinner is paced around crust, marbling, and temperature, with tableside guidance that stays polished rather than theatrical.',
   },
   {
     step: '03',
-    title: 'Cellar, dessert, digestif',
-    text: 'The close of dinner shifts the energy down with reserve pours, lighter sweets, and enough time for a long, unhurried finish.',
+    title: 'Cellar, cheese, and close',
+    text: 'The last movement slows the room with reserve pours, a restrained cheese trolley, dark desserts, and an unhurried final pace.',
   },
 ];
 
 export const guestPolicies = [
   {
-    title: 'Opening cadence',
-    text: 'Tuesday to Sunday dinner service with later weekend pacing, surfaced clearly to reduce booking friction.',
+    title: 'Dinner cadence',
+    text: 'Tuesday to Sunday service begins with an upper-lounge arrival and moves into a slower weekend dinner rhythm.',
   },
   {
     title: 'Dress code',
-    text: 'Smart elegant guidance keeps the room polished without overplaying formality.',
+    text: 'Smart elegant. Tailoring, evening dresses, polished separates, and refined footwear suit the room best.',
   },
   {
-    title: 'Service identity',
-    text: 'Each route now signals whether it is tasting, a la carte, chef counter, or private dining.',
+    title: 'House formats',
+    text: 'Guests may choose the dining room tasting, chef counter, a la carte dinner, or a private room enquiry.',
   },
   {
-    title: 'Reservation conduct',
-    text: 'Age guidance, dietary note collection, and private dining lead times are made explicit before booking.',
+    title: 'Guest guidance',
+    text: 'Children aged 8 and above are welcome in the main room, and dietary notes should be shared before arrival.',
   },
 ];
 
 export const privateDiningFormats = [
   {
     tag: 'Executive dinners',
-    title: 'Boardroom supper',
+    title: 'The Mercer room',
     capacity: '8-12',
-    text: 'A quieter format for leadership dinners, negotiations, and hosted investor evenings with minimal interruption and tailored pacing.',
+    text: 'A quieter format for leadership dinners, negotiations, and hosted investor evenings, with low-interruption service and a fixed tasting cadence.',
   },
   {
     tag: 'Celebrations',
-    title: 'Occasion tasting',
+    title: 'Celebration tasting',
     capacity: '10-16',
-    text: 'Designed for anniversaries, milestones, and close-group celebrations, with upgraded pairings and bespoke finishing details.',
+    text: 'Built for anniversaries, milestones, and close-group celebrations, with upgraded pairings and bespoke finishing details.',
   },
   {
     tag: 'Brand launches',
-    title: 'Private reveal dinner',
+    title: 'Reveal dinner',
     capacity: '14-16',
     text: 'A stronger-format evening for launches, press dinners, and partner gatherings that need exclusivity and discreet service control.',
   },
@@ -172,12 +205,12 @@ export const faqItems = [
   {
     question: 'How far in advance should reservations be made?',
     answer:
-      'Prime Friday and Saturday seatings usually book 10 to 14 days in advance. The chef counter and private dining room should be requested earlier.',
+      'Prime Friday and Saturday seatings usually book 10 to 14 days in advance. The chef counter and private room should be requested earlier.',
   },
   {
     question: 'Do you accommodate dietary restrictions?',
     answer:
-      'Yes. We can adapt tasting formats for allergies and most dietary needs when shared at booking time. Private dining menus are fully customized.',
+      'Yes. We can adapt tasting formats for allergies and most dietary needs when shared at booking time. Private-room menus are fully customised.',
   },
   {
     question: 'What is the private dining capacity?',

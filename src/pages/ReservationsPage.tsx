@@ -13,7 +13,7 @@ export function ReservationsPage() {
             Book with <span className="italic luxury-text-gradient font-normal">context</span>, not guesswork.
           </>
         }
-        description="A proper restaurant site gives guests the detail they need before they book. Aura now has a dedicated reservations page with service types, timings, policies, and a shared booking form."
+        description="Choose the room, the pace, and the type of evening you want. The booking layer should feel as considered as the dining room itself."
         image="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&q=80"
         compact
       />
@@ -24,10 +24,10 @@ export function ReservationsPage() {
             <div className="mb-8">
               <span className="small-caps text-gold">Reserve a table</span>
               <h2 className="mt-4 font-serif text-4xl font-light sm:text-5xl">
-                The booking layer now matches the level of the brand.
+                Reservations should feel calm, precise, and expected.
               </h2>
               <p className="mt-6 max-w-2xl text-white/60 leading-relaxed">
-                Premium venues make reservation details easy to trust. This page centralises dining style, timing, service selection, and guest notes into one clear booking flow.
+                Guests can book the dining room, request the chef counter, or signal private dining directly, with timings and house guidance surfaced beside the form.
               </p>
             </div>
             <ReservationForm />

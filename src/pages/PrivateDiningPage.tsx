@@ -13,7 +13,7 @@ export function PrivateDiningPage() {
             A room for <span className="italic luxury-text-gradient font-normal">serious dinners</span> and private celebration.
           </>
         }
-        description="One of the clearest lessons from the Burj Al Arab research is that high-end venues treat private dining as its own product, not a hidden note in the footer. Aura now does the same."
+        description="Aura's private room is designed for executives, hosts, and celebratory tables who want the full service language of the house with more privacy and more control."
         image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80"
         compact
         actions={[
@@ -27,10 +27,10 @@ export function PrivateDiningPage() {
           <div>
             <span className="small-caps text-gold">Dedicated pathway</span>
             <h2 className="mt-4 font-serif text-4xl font-light leading-tight sm:text-5xl">
-              Private dining deserves its own page, language, and enquiry context.
+              Private dining should feel like a different room, not a larger booking.
             </h2>
             <p className="mt-6 text-white/60 leading-relaxed">
-              That is how the strongest luxury restaurant sites handle high-value group occasions: with tailored experience descriptions, operational expectations, and a separate route into bookings.
+              The Mercer Room is built for dinners that need privacy, clearer control, and a menu designed around the host rather than the main floor.
             </p>
             <div className="mt-10 space-y-5 text-white/60">
               <p className="flex items-start gap-3">
@@ -73,10 +73,10 @@ export function PrivateDiningPage() {
         <div className="mx-auto max-w-7xl px-6 text-center sm:px-12 md:px-20">
           <span className="small-caps text-gold">Next step</span>
           <h2 className="mt-4 font-serif text-4xl font-light sm:text-6xl">
-            Move from ambience to <span className="italic">operational confidence</span>.
+            Move from invitation to <span className="italic">host control</span>.
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-white/60 leading-relaxed">
-            This page gives Aura the kind of high-intent pathway premium guests expect before they submit an enquiry.
+            Private dining works best when the guest understands the room, the format, and the cadence before they enquire.
           </p>
           <div className="mt-10 flex justify-center">
             <Link

@@ -114,6 +114,16 @@
   padding: 1.5rem;
 }
 
+.editorial-panel {
+  border-top: 1px solid rgba(250, 249, 246, 0.14);
+  padding-top: 1.5rem;
+}
+
+.ritual-card {
+  border-top: 1px solid rgba(212, 175, 55, 0.22);
+  padding-top: 1rem;
+}
+
 .reservation-panel {
   border: 1px solid rgba(250, 249, 246, 0.1);
   border-radius: 28px;
