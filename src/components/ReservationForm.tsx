@@ -187,13 +187,13 @@ export function ReservationForm({ initialService = 'Dining room tasting', compac
           </label>
         </div>
 
-        <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 2xl:grid-cols-12">
-          <label className="reservation-field 2xl:col-span-3">
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,0.8fr)]">
+          <label className="reservation-field">
             <span className="small-caps text-gold">Date</span>
             <input type="date" value={form.date} onChange={(event) => updateField('date', event.target.value)} />
             {errors.date ? <small>{errors.date}</small> : null}
           </label>
-          <label className="reservation-field 2xl:col-span-3">
+          <label className="reservation-field">
             <span className="small-caps text-gold">Time</span>
             <select value={form.time} onChange={(event) => updateField('time', event.target.value)}>
               {availableTimes.length ? (
@@ -203,12 +203,12 @@ export function ReservationForm({ initialService = 'Dining room tasting', compac
                   </option>
                 ))
               ) : (
-                <option value="">No seatings available</option>
+                <option value="">Unavailable</option>
               )}
             </select>
             {errors.time ? <small>{errors.time}</small> : null}
           </label>
-          <label className="reservation-field 2xl:col-span-2">
+          <label className="reservation-field sm:col-span-2 xl:col-span-1">
             <span className="small-caps text-gold">Guests</span>
             <select value={form.guests} onChange={(event) => updateField('guests', event.target.value)}>
               {['1', '2', '3', '4', '5', '6', '7', '8'].map((guestCount) => (
@@ -219,16 +219,17 @@ export function ReservationForm({ initialService = 'Dining room tasting', compac
             </select>
             {errors.guests ? <small>{errors.guests}</small> : null}
           </label>
-          <label className="reservation-field md:col-span-2 2xl:col-span-4">
-            <span className="small-caps text-gold">Service</span>
-            <select value={form.service} onChange={(event) => updateField('service', event.target.value)}>
-              <option>Dining room tasting</option>
-              <option>A la carte dinner</option>
-              <option>Chef counter</option>
-              <option>Private dining enquiry</option>
-            </select>
-          </label>
         </div>
+
+        <label className="reservation-field mt-4">
+          <span className="small-caps text-gold">Service</span>
+          <select value={form.service} onChange={(event) => updateField('service', event.target.value)}>
+            <option>Dining room tasting</option>
+            <option>A la carte dinner</option>
+            <option>Chef counter</option>
+            <option>Private dining enquiry</option>
+          </select>
+        </label>
 
         <label className="reservation-field mt-4">
           <span className="small-caps text-gold">Notes</span>
