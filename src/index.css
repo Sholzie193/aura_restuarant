@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-muted: #A3862C;
+  --color-ink: #050505;
+  --color-ink-light: #1A1A1A;
+  --color-off-white: #FAF9F6;
+  
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-off-white);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.luxury-text-gradient {
+  background: linear-gradient(to right, #ECE2CD, #D4AF37, #ECE2CD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.oval-mask {
+  mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1 1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="0.5" cy="0.5" rx="0.5" ry="0.5"/></svg>');
+  mask-size: 100% 100%;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1 1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="0.5" cy="0.5" rx="0.5" ry="0.5"/></svg>');
+  -webkit-mask-size: 100% 100%;
+}
+
+.small-caps {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  color: rgba(250, 249, 246, 0.7);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+}
