@@ -1,11 +1,25 @@
 import { CalendarDays, ShieldCheck, Users, Wine } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageHero } from '../components/PageHero';
+import { Seo } from '../components/Seo';
 import { privateDiningFormats } from '../site-data';
 
 export function PrivateDiningPage() {
   return (
     <>
+      <Seo
+        title="Private Dining and Executive Dinner Bookings"
+        description="Book private dining at Aura Steakhouse in Dubai for executive dinners, celebrations, launch events, and bespoke tasting menus."
+        path="/private-dining"
+        image="/images/menu/chef-counter-prelude.jpg"
+        keywords={[
+          'private dining Dubai',
+          'executive dinner Dubai',
+          'group dining Dubai',
+          'celebration dinner Dubai',
+          'luxury private room Dubai',
+        ]}
+      />
       <PageHero
         eyebrow="Private dining"
         title={

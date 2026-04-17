@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, ChefHat, Flame, GlassWater, ShieldCheck, Wine } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageHero } from '../components/PageHero';
+import { Seo } from '../components/Seo';
 import { auraRituals, provenanceNotes } from '../site-data';
 
 const venueCards = [
@@ -28,6 +29,12 @@ const venueCards = [
 export function HomePage() {
   return (
     <>
+      <Seo
+        title="Michelin-Calibre Steakhouse, Wagyu, and Fine Dining"
+        description="Aura Steakhouse is a luxury Dubai steakhouse on Jumeirah Beach Road offering Wagyu, dry-aged cuts, private dining, and refined dinner reservations."
+        path="/"
+        image="/images/menu/a5-wagyu-ribeye.jpg"
+      />
       <PageHero
         eyebrow="Michelin-calibre steakhouse"
         title={

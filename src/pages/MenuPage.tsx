@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PageHero } from '../components/PageHero';
+import { Seo } from '../components/Seo';
 import { menuCollections, pairingNotes } from '../site-data';
 
 export function MenuPage() {
@@ -11,6 +12,20 @@ export function MenuPage() {
 
   return (
     <>
+      <Seo
+        title="Steakhouse Menu, Wagyu, and Dry-Aged Cuts"
+        description="Explore Aura Steakhouse's Dubai menu of A5 Wagyu, dry-aged bone-in steaks, tasting flights, sides, and cellar pairings."
+        path="/menu"
+        image="/images/menu/reserve-tasting-flight.jpg"
+        keywords={[
+          'Dubai steak menu',
+          'A5 Wagyu Dubai',
+          'dry-aged steak Dubai',
+          'steakhouse menu Dubai',
+          'fine dining menu Dubai',
+          'Wagyu ribeye Dubai',
+        ]}
+      />
       <PageHero
         eyebrow="Menu"
         title={

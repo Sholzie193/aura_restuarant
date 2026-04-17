@@ -1,11 +1,25 @@
 import { Clock3, GlassWater, Sparkles, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageHero } from '../components/PageHero';
+import { Seo } from '../components/Seo';
 import { experienceMoments, guestPolicies } from '../site-data';
 
 export function ExperiencePage() {
   return (
     <>
+      <Seo
+        title="Fine Dining Experience and Guest Policies"
+        description="Discover Aura Steakhouse's fine dining experience in Dubai, from lounge arrival and reserve pours to dress code, service pacing, and guest guidance."
+        path="/experience"
+        image="/images/menu/cellar-pairing.jpg"
+        keywords={[
+          'fine dining experience Dubai',
+          'luxury dinner Dubai',
+          'steakhouse experience Dubai',
+          'dress code restaurant Dubai',
+          'Jumeirah fine dining',
+        ]}
+      />
       <PageHero
         eyebrow="Experience"
         title={

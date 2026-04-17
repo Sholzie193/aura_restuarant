@@ -1,11 +1,25 @@
 import { CalendarDays, Clock3, MapPin, Phone } from 'lucide-react';
 import { ReservationForm } from '../components/ReservationForm';
 import { PageHero } from '../components/PageHero';
+import { Seo } from '../components/Seo';
 import { faqItems, openingHours } from '../site-data';
 
 export function ReservationsPage() {
   return (
     <>
+      <Seo
+        title="Reservations, Table Booking, and Private Dining Enquiries"
+        description="Reserve a table at Aura Steakhouse Dubai for dining room service, chef counter seating, or private dining enquiries with clear hours and guest guidance."
+        path="/reservations"
+        image="/images/menu/dry-aged-bone-in.jpg"
+        keywords={[
+          'restaurant reservations Dubai',
+          'book steakhouse Dubai',
+          'chef counter Dubai',
+          'private dining reservation Dubai',
+          'luxury restaurant booking Dubai',
+        ]}
+      />
       <PageHero
         eyebrow="Reservations"
         title={
