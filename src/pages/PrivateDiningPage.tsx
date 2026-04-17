@@ -52,9 +52,15 @@ export function PrivateDiningPage() {
             </div>
           </div>
 
-          <div className="grid gap-6">
+          <div className="overflow-hidden rounded-[34px] border border-white/10 bg-black/20">
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80"
+              alt="Aura private dining room"
+              className="aspect-[16/9] w-full object-cover brightness-[0.68]"
+            />
+            <div className="grid gap-6 p-6 md:p-8">
             {privateDiningFormats.map((format) => (
-              <div key={format.title} className="glass-card">
+              <div key={format.title} className="private-format-row">
                 <div className="flex items-start justify-between gap-6">
                   <div>
                     <p className="small-caps text-gold">{format.tag}</p>
@@ -65,6 +71,7 @@ export function PrivateDiningPage() {
                 <p className="mt-5 text-white/60 leading-relaxed">{format.text}</p>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </section>

@@ -129,7 +129,7 @@ export function HomePage() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-8 md:grid-cols-3">
+          <div className="mt-14 grid gap-8 md:grid-cols-2">
             {venueCards.map((card, index) => (
               <motion.div
                 key={card.title}
@@ -137,16 +137,17 @@ export function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.12 }}
-                className="group"
+                className={index === 0 ? 'group md:col-span-3' : 'group'}
               >
                 <Link to={card.to}>
-                  <div className="overflow-hidden rounded-[30px] border border-white/10 bg-black/20">
+                  <div className={index === 0 ? 'venue-panel venue-panel-feature' : 'venue-panel'}>
                     <img
                       src={card.image}
                       alt={card.title}
-                      className="aspect-[4/5] w-full object-cover brightness-[0.82] transition-transform duration-700 ease-out group-hover:scale-105 group-hover:brightness-100"
+                      className={index === 0 ? 'venue-panel-image venue-panel-image-feature' : 'venue-panel-image'}
                     />
-                    <div className="border-t border-white/10 p-6">
+                    <div className="venue-panel-copy">
+                      <p className="small-caps text-gold">{index === 0 ? 'Signature Room' : `0${index + 1}`}</p>
                       <div className="flex items-center justify-between gap-4">
                         <h3 className="font-serif text-3xl">{card.title}</h3>
                         <ArrowRight size={18} className="text-gold transition-transform group-hover:translate-x-1" />
@@ -181,21 +182,21 @@ export function HomePage() {
           </p>
 
           <div className="mt-14 grid gap-6 text-left md:grid-cols-3">
-            <div className="glass-card">
+            <div className="ritual-card">
               <Flame size={18} className="mb-4 text-gold" />
               <h3 className="font-serif text-2xl">Open fire</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/60">
                 The menu is built around crust, render, smoke, and temperature control rather than novelty.
               </p>
             </div>
-            <div className="glass-card">
+            <div className="ritual-card">
               <Wine size={18} className="mb-4 text-gold" />
               <h3 className="font-serif text-2xl">Late cellar</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/60">
                 The wine program comes later in the evening and leans toward older reds, structured pours, and quieter luxury.
               </p>
             </div>
-            <div className="glass-card">
+            <div className="ritual-card">
               <ShieldCheck size={18} className="mb-4 text-gold" />
               <h3 className="font-serif text-2xl">Room discipline</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/60">

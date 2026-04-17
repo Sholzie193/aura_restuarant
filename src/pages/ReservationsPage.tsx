@@ -33,8 +33,8 @@ export function ReservationsPage() {
             <ReservationForm />
           </div>
 
-          <div className="space-y-6">
-            <div className="glass-card">
+          <div className="reservation-dossier">
+            <div className="reservation-dossier-section">
               <div className="flex items-center gap-3">
                 <Clock3 size={18} className="text-gold" />
                 <span className="small-caps text-gold">Opening hours</span>
@@ -49,7 +49,7 @@ export function ReservationsPage() {
               </div>
             </div>
 
-            <div className="glass-card">
+            <div className="reservation-dossier-section">
               <div className="flex items-center gap-3">
                 <MapPin size={18} className="text-gold" />
                 <span className="small-caps text-gold">Location</span>
@@ -60,7 +60,7 @@ export function ReservationsPage() {
               </p>
             </div>
 
-            <div className="glass-card">
+            <div className="reservation-dossier-section">
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-gold" />
                 <span className="small-caps text-gold">Reservation desk</span>
@@ -72,7 +72,7 @@ export function ReservationsPage() {
               </p>
             </div>
 
-            <div className="glass-card">
+            <div className="reservation-dossier-section">
               <div className="flex items-center gap-3">
                 <CalendarDays size={18} className="text-gold" />
                 <span className="small-caps text-gold">Guest details</span>

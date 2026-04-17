@@ -124,6 +124,89 @@
   padding-top: 1rem;
 }
 
+.venue-panel {
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid rgba(250, 249, 246, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.venue-panel-feature {
+  display: grid;
+}
+
+.venue-panel-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: brightness(0.82);
+  transition: transform 700ms ease-out, filter 700ms ease-out;
+}
+
+.group:hover .venue-panel-image {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.venue-panel-copy {
+  border-top: 1px solid rgba(250, 249, 246, 0.1);
+  padding: 1.5rem;
+}
+
+.menu-ledger {
+  border-top: 1px solid rgba(250, 249, 246, 0.12);
+}
+
+.menu-ledger-row {
+  display: grid;
+  gap: 1.25rem;
+  border-bottom: 1px solid rgba(250, 249, 246, 0.08);
+  padding: 1.5rem 0;
+}
+
+.menu-ledger-index {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: rgba(212, 175, 55, 0.9);
+}
+
+.experience-policy-list {
+  border-top: 1px solid rgba(250, 249, 246, 0.12);
+}
+
+.experience-policy-row {
+  border-bottom: 1px solid rgba(250, 249, 246, 0.08);
+  padding: 1.5rem 0;
+}
+
+.private-format-row {
+  border-top: 1px solid rgba(250, 249, 246, 0.1);
+  padding-top: 1.25rem;
+}
+
+.private-format-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.reservation-dossier {
+  border: 1px solid rgba(250, 249, 246, 0.1);
+  border-radius: 32px;
+  background: rgba(250, 249, 246, 0.03);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.reservation-dossier-section {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(250, 249, 246, 0.08);
+}
+
+.reservation-dossier-section:first-child {
+  border-top: 0;
+}
+
 .reservation-panel {
   border: 1px solid rgba(250, 249, 246, 0.1);
   border-radius: 28px;
@@ -172,4 +255,37 @@
 .reservation-field small {
   color: #f2a6a6;
   font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .venue-panel-feature {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    align-items: stretch;
+  }
+
+  .venue-panel-image-feature {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+
+  .venue-panel-feature .venue-panel-copy {
+    border-top: 0;
+    border-left: 1px solid rgba(250, 249, 246, 0.1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-ledger-row {
+    grid-template-columns: 84px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .experience-policy-row {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 260px) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
 }

@@ -62,12 +62,12 @@ export function ExperiencePage() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-14 experience-policy-list">
             {guestPolicies.map((policy, index) => {
               const Icon = [Clock3, Star, GlassWater, Sparkles][index % 4];
 
               return (
-                <div key={policy.title} className="glass-card">
+                <div key={policy.title} className="experience-policy-row">
                   <Icon size={18} className="mb-4 text-gold" />
                   <h3 className="font-serif text-2xl">{policy.title}</h3>
                   <p className="mt-4 text-sm leading-relaxed text-white/60">{policy.text}</p>

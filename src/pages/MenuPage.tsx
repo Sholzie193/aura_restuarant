@@ -29,16 +29,16 @@ export function MenuPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-24 sm:px-12 md:px-20">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <div>
-              <span className="small-caps text-gold">House Selection</span>
-              <h2 className="mt-4 font-serif text-5xl font-light sm:text-7xl">
-                Built for <span className="italic">crust, marbling, and pace</span>
-              </h2>
-            </div>
-            <p className="max-w-md text-white/55">
-              The strongest tables choose with intent. Aura keeps the menu concise so every cut, pairing, and finish feels deliberate.
-            </p>
+          <div>
+            <span className="small-caps text-gold">House Selection</span>
+            <h2 className="mt-4 font-serif text-5xl font-light sm:text-7xl">
+              Built for <span className="italic">crust, marbling, and pace</span>
+            </h2>
           </div>
+          <p className="max-w-md text-white/55">
+            The strongest tables choose with intent. Aura keeps the menu concise so every cut, pairing, and finish feels deliberate.
+          </p>
+        </div>
 
         <div className="mt-12 flex flex-wrap gap-3">
           {menuCollections.map((collection) => (
@@ -55,38 +55,59 @@ export function MenuPage() {
 
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/60">{selectedCollection.blurb}</p>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
-          {selectedCollection.items.map((item, index) => (
-            <motion.div
-              key={`${selectedCollection.id}-${item.title}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.75, delay: index * 0.1 }}
-              className="group"
-            >
-              <div className="overflow-hidden mb-6 aspect-[4/5] oval-mask">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="h-full w-full object-cover brightness-[0.85] transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-100"
-                />
+        <div className="mt-14 grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
+          <div className="space-y-6">
+            <div className="relative overflow-hidden rounded-[34px] border border-white/10">
+              <img
+                src={selectedCollection.items[0].img}
+                alt={selectedCollection.items[0].title}
+                className="aspect-[4/5] w-full object-cover brightness-[0.8]"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-7">
+                <p className="small-caps text-gold">{selectedCollection.label}</p>
+                <h3 className="mt-3 font-serif text-4xl">{selectedCollection.items[0].title}</h3>
+                <p className="mt-3 max-w-sm text-white/70">{selectedCollection.items[0].desc}</p>
               </div>
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="font-serif text-3xl">{item.title}</h3>
-                <span className="font-serif text-2xl text-gold">{item.price}</span>
-              </div>
-              <p className="small-caps mt-3 text-white/40">{item.region}</p>
-              <p className="mt-4 text-sm leading-relaxed text-white/60">{item.desc}</p>
-            </motion.div>
-          ))}
+            </div>
+            <div className="editorial-panel">
+              <p className="small-caps text-gold">House Rule</p>
+              <p className="mt-4 max-w-md text-white/60 leading-relaxed">
+                The menu is short by design. Once a cut fails texture or marbling checks, it leaves the board for the night.
+              </p>
+            </div>
+          </div>
+
+          <div className="menu-ledger">
+            {selectedCollection.items.map((item, index) => (
+              <motion.div
+                key={`${selectedCollection.id}-${item.title}`}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.65, delay: index * 0.08 }}
+                className="menu-ledger-row"
+              >
+                <div className="menu-ledger-index">{String(index + 1).padStart(2, '0')}</div>
+                <div className="menu-ledger-main">
+                  <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                    <div className="pr-4">
+                      <h3 className="font-serif text-3xl">{item.title}</h3>
+                      <p className="small-caps mt-2 text-white/40">{item.region}</p>
+                    </div>
+                    <span className="font-serif text-3xl text-gold">{item.price}</span>
+                  </div>
+                  <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/60">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="border-y border-white/5 bg-ink-light py-24">
         <div className="mx-auto max-w-7xl px-6 sm:px-12 md:px-20">
-          <div className="grid gap-12 md:grid-cols-[0.95fr_1.05fr]">
-            <div>
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="editorial-panel">
               <span className="small-caps text-gold">Cellar and finish</span>
               <h2 className="mt-4 font-serif text-4xl font-light leading-tight sm:text-5xl">
                 The menu should read like a house with habits.
@@ -96,9 +117,9 @@ export function MenuPage() {
               </p>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-3">
               {pairingNotes.map((note) => (
-                <div key={note.title} className="glass-card">
+                <div key={note.title} className="ritual-card">
                   <h3 className="font-serif text-2xl">{note.title}</h3>
                   <p className="mt-4 text-sm leading-relaxed text-white/60">{note.text}</p>
                 </div>
